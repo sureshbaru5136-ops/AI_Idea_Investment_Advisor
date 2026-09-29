@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Idea Investment Advisor</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="logo">💡</div>
+      <div>
+        <h1>AI Idea Investment Advisor</h1>
+        <p>Analyze a startup idea and explore market-opportunity signals.</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Enter Business Idea</h2>
+      <form id="ideaForm">
+        <label>Business Idea
+          <textarea id="idea" required placeholder="Example: AI tutor for school students"></textarea>
+        </label>
+
+        <div class="grid">
+          <label>Country / Region
+            <input id="country" required placeholder="India">
+          </label>
+
+          <label>Investment Amount (₹)
+            <input id="investment" type="number" min="1" required placeholder="500000">
+          </label>
+
+          <label>Target Customers
+            <input id="customers" required placeholder="School students">
+          </label>
+
+          <label>Industry
+            <input id="industry" required placeholder="Education">
+          </label>
+        </div>
+
+        <button type="submit">Analyze Idea</button>
+      </form>
+    </section>
+
+    <section id="result" class="card hidden">
+      <h2>Analysis Report</h2>
+      <div id="recommendation" class="recommendation"></div>
+      <div id="scores" class="scores"></div>
+
+      <div class="two-col">
+        <div>
+          <h3>Positive Signals</h3>
+          <ul id="strengths"></ul>
+        </div>
+        <div>
+          <h3>Suggested Next Steps</h3>
+          <ul id="improvements"></ul>
+        </div>
+      </div>
+
+      <p class="note">
+        Educational prototype only. Scores are heuristic estimates and are not financial advice.
+      </p>
+    </section>
+  </main>
+  <script src="/static/script.js"></script>
+</body>
+</html>
